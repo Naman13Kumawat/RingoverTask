@@ -8,7 +8,7 @@ import Cart from "../../components/Cart/Cart"
 export default function Store() {
   return (
     <>
-      <Navbar />
+      <Navbar page={"store"}/>
       <div className="store_container">
         <Filter />
         <Shoes />

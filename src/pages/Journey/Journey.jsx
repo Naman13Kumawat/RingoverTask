@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar/Navbar"
 export default function Journey() {
   return (
     <>
-      <Navbar />
+      <Navbar page="journey"/>
     </>
   )
 }
