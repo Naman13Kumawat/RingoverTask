@@ -8,14 +8,13 @@
   src: url(../public/fonts/Product_Sans.ttf) format("truetype");
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Product", sans-serif;
 }
 
-body{
-  background-image: linear-gradient(#FFF 15%, #E8E8E8); 
-  height: 100vh;
+body {
+  background-image: linear-gradient(#FFF 15%, #E8E8E8);
 }

@@ -1,5 +1,4 @@
 import "./Navbar.scss";
-import { findDOMNode } from "react-dom";
 
 export default function Navbar() {
 
