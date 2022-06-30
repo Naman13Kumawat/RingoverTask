@@ -12,7 +12,7 @@ export default function Store() {
       </span>
       <div className="product_container">
       {products.map((product) => {
-        return <ProductCard key={product._id} product={product} />;
+        return <ProductCard key={product._id} product={product} component={true}/>;
       })}
       </div>
     </div>

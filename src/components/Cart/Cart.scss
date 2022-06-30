@@ -6,6 +6,7 @@
     padding: 2rem;
     background-color: #fff;
     border-radius: 2px;
+    justify-content: space-between;
 
     .heading {
         display: flex;
@@ -40,7 +41,8 @@
     .cart_products {
         display: flex;
         flex-direction: column;
-        margin: auto;
+        margin: 2rem auto;
+        gap: 0.5rem;
 
         p {
             display: block;
@@ -48,16 +50,23 @@
             color: rgb(153, 153, 153);
             font-size: 0.9rem;
         }
+
+        .clear{
+            color: red;
+            cursor: pointer;
+        }
     }
 
     .addressDate {
         display: flex;
         justify-content: flex-start;
         gap: 2rem;
+        margin-top: auto;
 
         span {
             display: flex;
             justify-content: center;
+            position: relative;
             align-items: center;
             color: rgb(119, 119, 119);
             font-size: 0.9rem;
@@ -67,6 +76,16 @@
             svg {
                 width: 1.5rem;
                 fill: rgb(119, 119, 119);
+            }
+
+            input {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                cursor: pointer;
             }
 
             &:hover {
@@ -88,5 +107,10 @@
         padding: 0.3rem 0.5rem;
         border: none;
         border-radius: 2px;
+    }
+
+    .enabled{
+        cursor: pointer;
+        background-color: #000;
     }
 }

@@ -1,6 +1,15 @@
 import "./Cart.scss";
 
+import ProductCard from "../ProductCard/ProductCard";
+import { useProduct } from "../../hooks/useProduct";
+
 export default function Cart() {
+  const { cartProducts, setCartProducts } = useProduct();
+  console.log(cartProducts.length);
+  const clear = () => {
+    if (window.confirm("Do you want to clear your cart?")) setCartProducts([]);
+  };
+
   return (
     <div className="cart">
       <span className="heading">
@@ -10,7 +19,17 @@ export default function Cart() {
         </div>
       </span>
       <span className="cart_products">
-        <p>What's stopping you, designer?</p>
+        {cartProducts.length === 0 ? null : (
+          <p className="clear" onClick={clear}>
+            Clear Cart
+          </p>
+        )}
+        {cartProducts.map((product, index) => {
+          return <ProductCard key={index} product={product} />;
+        })}
+        {cartProducts.length === 0 ? (
+          <p>What's stopping you, designer?</p>
+        ) : null}
       </span>
       <div className="addressDate">
         <span>
@@ -21,7 +40,6 @@ export default function Cart() {
             x="0px"
             y="0px"
             viewBox="0 0 492 492"
-            Style="enable-background:new 0 0 492 492;"
             xmlSpace="preserve"
           >
             <g id="Layer_1">
@@ -40,68 +58,97 @@ export default function Cart() {
             x="0px"
             y="0px"
             viewBox="0 0 492 492"
-            Style="enable-background:new 0 0 492 492;"
             xmlSpace="preserve"
           >
             <g id="Layer_1">
-              <rect x="172" y="236.1" class="st0" width="24.3" height="24.3" />
+              <rect
+                x="172"
+                y="236.1"
+                className="st0"
+                width="24.3"
+                height="24.3"
+              />
               <rect
                 x="234.1"
                 y="236.1"
-                class="st0"
+                className="st0"
                 width="24.3"
                 height="24.3"
               />
               <rect
                 x="296.2"
                 y="236.1"
-                class="st0"
+                className="st0"
                 width="24.3"
                 height="24.3"
               />
               <rect
                 x="358.3"
                 y="236.1"
-                class="st0"
+                className="st0"
                 width="24.3"
                 height="24.3"
               />
-              <rect x="110" y="294.6" class="st0" width="24.3" height="24.3" />
-              <rect x="172" y="294.6" class="st0" width="24.3" height="24.3" />
+              <rect
+                x="110"
+                y="294.6"
+                className="st0"
+                width="24.3"
+                height="24.3"
+              />
+              <rect
+                x="172"
+                y="294.6"
+                className="st0"
+                width="24.3"
+                height="24.3"
+              />
               <rect
                 x="234.1"
                 y="294.6"
-                class="st0"
+                className="st0"
                 width="24.3"
                 height="24.3"
               />
               <rect
                 x="296.2"
                 y="294.6"
-                class="st0"
+                className="st0"
                 width="24.3"
                 height="24.3"
               />
-              <rect x="110" y="353.1" class="st0" width="24.3" height="24.3" />
-              <rect x="172" y="353.1" class="st0" width="24.3" height="24.3" />
+              <rect
+                x="110"
+                y="353.1"
+                className="st0"
+                width="24.3"
+                height="24.3"
+              />
+              <rect
+                x="172"
+                y="353.1"
+                className="st0"
+                width="24.3"
+                height="24.3"
+              />
               <rect
                 x="234.1"
                 y="353.1"
-                class="st0"
+                className="st0"
                 width="24.3"
                 height="24.3"
               />
               <rect
                 x="296.2"
                 y="353.1"
-                class="st0"
+                className="st0"
                 width="24.3"
                 height="24.3"
               />
               <rect
                 x="358.3"
                 y="353.1"
-                class="st0"
+                className="st0"
                 width="24.3"
                 height="24.3"
               />
@@ -113,10 +160,19 @@ export default function Cart() {
             </g>
             <g id="Master_Layer_2"></g>
           </svg>
+          <input type="date" name="date" />
           Select date
         </span>
       </div>
-      <button class="orderBtn">Order now</button>
+      <button
+        className={`orderBtn ${
+          cartProducts.length === 0 ? (
+            null
+          ) : "enabled"
+        }`}
+      >
+        Order now
+      </button>
     </div>
   );
 }

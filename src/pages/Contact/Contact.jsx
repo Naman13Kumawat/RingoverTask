@@ -28,13 +28,13 @@ export default function Contact() {
       <div className="socials">
         <p>Stay in touch.</p>
         <span>
-          <a href="">
+          <a href="https://twitter.com/login" target="_blank" rel="noreferrer">
             <img src="/images/twitter.png" alt="twitter" />
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
             <img src="/images/insta.png" alt="insta" />
           </a>
-          <a href="">
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
             <img src="/images/facebook.png" alt="fb" />
           </a>
         </span>

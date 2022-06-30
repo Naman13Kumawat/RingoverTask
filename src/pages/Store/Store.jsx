@@ -3,16 +3,19 @@ import "./Store.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import Shoes from "../../components/Shoes/Shoes";
 import Filter from "../../components/Filter/Filter";
-import Cart from "../../components/Cart/Cart"
+import Cart from "../../components/Cart/Cart";
+import { ProductProvider } from "../../context/productContext";
 
 export default function Store() {
   return (
     <>
-      <Navbar page={"store"}/>
+      <Navbar page={"store"} />
       <div className="store_container">
-        <Filter />
-        <Shoes />
-        <Cart />
+        <ProductProvider>
+          <Filter />
+          <Shoes />
+          <Cart />
+        </ProductProvider>
       </div>
     </>
   );
