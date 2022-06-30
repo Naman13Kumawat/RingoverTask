@@ -9,7 +9,7 @@ export default function Navbar({ page }) {
 
   return (
     <div className="navbar">
-      <img className="logo" src="/images/websitelogo.png" alt="logo" />
+      <img className="logo" src="/images/logoB.png" alt="logo" />
       <ul>
         <Link to="">
           <li onClick={handleClick}>
