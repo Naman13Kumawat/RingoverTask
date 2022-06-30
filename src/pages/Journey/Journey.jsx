@@ -6,6 +6,7 @@ export default function Journey() {
   return (
     <>
       <Navbar page="journey"/>
+      
     </>
   )
 }
