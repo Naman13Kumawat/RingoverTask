@@ -1,5 +1,15 @@
 import "./ProductCard.scss";
 
+function ButtonModal() {
+  return (
+    <div className="btn_container">
+      <button>
+        <img src="/images/bag.png" className="addBtn" alt="addtocart" />
+      </button>
+    </div>
+  );
+}
+
 export default function ProductCard({ product }) {
   return (
     <div className="product">
@@ -9,7 +19,7 @@ export default function ProductCard({ product }) {
         <p>Rs. {product.price}/-</p>
         <p>Rating: {product.rating}</p>
       </span>
-      <button className="btn">Add to Cart</button>
+      <ButtonModal />
     </div>
   );
 }

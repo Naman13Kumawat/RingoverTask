@@ -64,10 +64,10 @@ export default function Filter() {
       </span>
       <span className="type">
         <h2>Type</h2>
-        <label htmlFor="loafers">
+        <label>
           <input type="checkbox" id="loafers" />&nbsp;Loafers
         </label>
-        <label htmlFor="Sneakers">
+        <label>
           <input type="checkbox" id="Sneakers" />&nbsp;Sneakers
         </label>
       </span>
