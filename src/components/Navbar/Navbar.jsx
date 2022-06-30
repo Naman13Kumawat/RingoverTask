@@ -3,7 +3,6 @@ import "./Navbar.scss";
 
 export default function Navbar({ page }) {
   const handleClick = (e) => {
-    console.log("Cliked", e.target.tagName);
     e.target.classList.add("active");
   };
 

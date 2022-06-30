@@ -5,7 +5,6 @@ import { useProduct } from "../../hooks/useProduct";
 
 export default function Cart() {
   const { cartProducts, setCartProducts } = useProduct();
-  console.log(cartProducts.length);
   const clear = () => {
     if (window.confirm("Do you want to clear your cart?")) setCartProducts([]);
   };
