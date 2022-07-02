@@ -9,32 +9,11 @@ export default function Filter() {
   const [temArr, setTA] = useState([]);
 
   const handleClick = (e) => {
-    const name = e.target.name;
-    const id = Number(e.target.id);
-
-    const currentIndex = filtersValues.indexOf(id);
-    const newChecked = [...filtersValues];
-
-    if (currentIndex === -1) {
-      newChecked.push(id);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
-
-    setfiltersValues(newChecked);
-
-    if (name === "type") {
-      setTA(filteredProducts.filter((product) => product.type === id));
-    }
+    
   };
 
   const handleSubmit = (e) => {
-    console.log(filtersValues);
-    if (filtersValues.length !== 0) {
-      setFilteredProducts(temArr);
-    } else {
-      setFilteredProducts(products);
-    }
+    
   };
 
   return (
