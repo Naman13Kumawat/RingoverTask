@@ -21,7 +21,7 @@
         z-index: -1;
         background-color: rgb(210, 210, 210);
 
-        &::after{
+        &::after {
             content: "";
             height: inherit;
             width: 100%;
@@ -31,12 +31,26 @@
         }
     }
 
-    .member_container{
+    .member_container {
         display: flex;
         justify-content: center;
         align-items: stretch;
         gap: 2rem;
-        width: 70%;
+        width: 100%;
         margin: 2rem auto;
     }
+}
+
+@media only screen and (max-width: 1300px) {
+    .team {
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .member_container {
+            flex-wrap: wrap;
+        }
+    }
+
 }
