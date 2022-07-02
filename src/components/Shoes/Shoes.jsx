@@ -17,9 +17,9 @@ export default function Store() {
         <button className="btn">Sort by</button>
       </span>
       <div className="product_container">
-        {filteredProducts.length === 0
+        {products.length === 0
           ? <p>No results.</p>
-          : filteredProducts.map((product) => (
+          : products.map((product) => (
               <ProductCard
                 key={product._id}
                 product={product}
