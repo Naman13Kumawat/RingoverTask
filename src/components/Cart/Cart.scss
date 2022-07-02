@@ -38,6 +38,12 @@
 
     }
 
+    .clear{
+        color: red;
+        cursor: pointer;
+        font-size: 0.8rem;
+    }
+
     .cart_products {
         display: flex;
         flex-direction: column;
@@ -49,11 +55,6 @@
             margin: auto;
             color: rgb(153, 153, 153);
             font-size: 0.9rem;
-        }
-
-        .clear{
-            color: red;
-            cursor: pointer;
         }
     }
 
@@ -112,5 +113,14 @@
     .enabled{
         cursor: pointer;
         background-color: #000;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .cart{
+        .cart_products{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr)
+        }
     }
 }

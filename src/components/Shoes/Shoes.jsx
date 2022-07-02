@@ -1,8 +1,14 @@
 import "./Shoes.scss";
 import { products } from "../../data/shoes.js";
-import ProductCard from "../ProductCard/ProductCard"
+import ProductCard from "../ProductCard/ProductCard";
+import { useProduct } from "../../hooks/useProduct";
 
 export default function Store() {
+  const { filteredProducts, setFilteredProducts } = useProduct();
+
+  const handleClick = () => {
+    setFilteredProducts([]);
+  };
   return (
     <div className="store">
       <span className="heading">
@@ -11,9 +17,15 @@ export default function Store() {
         <button className="btn">Sort by</button>
       </span>
       <div className="product_container">
-      {products.map((product) => {
-        return <ProductCard key={product._id} product={product} component={true}/>;
-      })}
+        {filteredProducts.length === 0
+          ? <p>No results.</p>
+          : filteredProducts.map((product) => (
+              <ProductCard
+                key={product._id}
+                product={product}
+                component={true}
+              />
+            ))}
       </div>
     </div>
   );

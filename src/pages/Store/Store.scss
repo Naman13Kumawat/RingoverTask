@@ -1,5 +1,24 @@
-.store_container{
+.store_container {
     display: flex;
     gap: 1.5rem;
     margin: 1rem 1.5rem;
+
+    .responseDiv{
+        display: flex;
+        gap: 1.5rem;
+    }
+
+}
+
+
+@media only screen and (max-width:1300px) {
+    .store_container{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 900px ) {
+    .responseDiv{
+        flex-direction: column;
+    }
 }

@@ -18,31 +18,31 @@
         gap: 2rem;
         list-style: none;
 
-        a{
+        a {
             text-decoration: none;
             color: #000;
         }
 
-        li{
+        li {
             cursor: pointer;
             position: relative;
 
-            .line{
+            .line {
                 position: absolute;
                 background-color: #000;
                 width: 0%;
                 height: 1.5px;
                 bottom: -1px;
                 transition: all 0.2s ease-in-out;
-                
-                &.active{
-                    width:70%
+
+                &.active {
+                    width: 70%
                 }
             }
-            
-        &:hover .line{
-            width: 70%;
-        }
+
+            &:hover .line {
+                width: 70%;
+            }
         }
     }
 
@@ -62,5 +62,11 @@
             font-size: 1rem;
             font-weight: 500;
         }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        gap: 6%;
     }
 }

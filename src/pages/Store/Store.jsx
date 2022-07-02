@@ -13,8 +13,10 @@ export default function Store() {
       <div className="store_container">
         <ProductProvider>
           <Filter />
-          <Shoes />
-          <Cart />
+          <div className="responseDiv">
+            <Shoes />
+            <Cart />
+          </div>
         </ProductProvider>
       </div>
     </>

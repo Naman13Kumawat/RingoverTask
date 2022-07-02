@@ -17,12 +17,12 @@ export default function Cart() {
           <img src="/images/bag.png" alt="cartLogo" />
         </div>
       </span>
-      <span className="cart_products">
         {cartProducts.length === 0 ? null : (
           <p className="clear" onClick={clear}>
             Clear Cart
           </p>
         )}
+      <span className="cart_products">
         {cartProducts.map((product, index) => {
           return <ProductCard key={index} product={product} />;
         })}
