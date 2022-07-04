@@ -1,6 +1,7 @@
 # [RingoverTask](https://ringover-task-seven.vercel.app/)
 
 A Multi-Page Application displaying E-commerce website for Shoes.
+Responsiveness upto 800px along with Add to cart functionality.
 
 Link to live website: https://ringover-task-seven.vercel.app/
 
